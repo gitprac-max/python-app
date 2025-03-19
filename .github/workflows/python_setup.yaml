@@ -14,13 +14,15 @@ jobs:
           uses: actions/setup-python@v4
           with:
              python-version: '3.9'
+        - name: pyhton version
+          run: python --version
         - name: Install Dependencies
           run: |
              python -m pip install --upgrade pip
              pip install pytest flake8
             
         - name: Run Linting
-          run: flake8 .
+          run: flake8 .--version
           
         - name: Run Tests
           run: pytest --version
