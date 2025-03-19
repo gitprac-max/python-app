@@ -22,7 +22,7 @@ jobs:
              pip install pytest flake8
             
         - name: Run version
-          run: flake8 .--version
+          run: flake8 --version
            
         - name: flake lint
           run: flake8
